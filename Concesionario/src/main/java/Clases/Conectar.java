@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/* Clase que permite establecer la conexion a la base de datos de mysql
+/* Clase que permite establecer la conexion a la base de datos de mysql  
 
 
 /*
