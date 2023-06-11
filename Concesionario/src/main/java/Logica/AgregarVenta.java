@@ -4,18 +4,49 @@
  */
 package Logica;
 
+import Clases.Conectar;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cristian
  */
 public class AgregarVenta {
-
-    public void insertDatos(String monto, String codigo, String nombre, String apellido, String documento, int PROPERTIES) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    
+    private final String SQL_INSERT = "INSERT INTO concesionario.vehiculo(placa, marca, tipo, modelo, kilometraje) VALUES (?,?,?,?,?)";
+    private PreparedStatement PS;
+    private Conectar CN;
+    
+    public AgregarVenta() { 
+        PS = null;
+        CN = new Conectar();
     }
 
-    public void insertDatos(String monto, String codigo, String nombre, String apellido, String documento) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int insertDatos(String monto, String codigo, String nombre, String apellido, String documento) {
+        
+        try{
+            PS = CN.getConnection().prepareStatement(SQL_INSERT);
+            PS.setString(1, monto);
+            PS.setString(2, codigo);
+            PS.setString(3, nombre);
+            PS.setString(4, apellido);
+            PS.setString(5, documento);
+            int res = PS.executeUpdate();
+            if(res>0){
+                JOptionPane.showMessageDialog(null,"Guardado Exitoso");
+            }
+        }catch (SQLException e) {
+            System.err.println("Error al guardar datos en BD:" + e.getMessage());
+        } finally{
+            PS = null;
+            CN.desconectar();
+        }
+        
+        return 0;
+
+        
     }
     
 }

@@ -20,7 +20,7 @@ public class Concesionario {
         System.out.println("Digite por favor si desea   Registrar vehiculo o Registrar venta");
         opc = entrada.nextInt();
         
-        if (opc = 1) {
+        if (opc == 1) {
             Frm_AgregarVehiculo AV = new Frm_AgregarVehiculo();
             AV.setVisible(true);
         }
