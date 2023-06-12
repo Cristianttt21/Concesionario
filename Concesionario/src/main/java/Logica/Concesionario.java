@@ -1,34 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package Logica;
 
 import Formularios.Frm_AgregarVehiculo;
-import Formularios.Frm_Venta;
+import Formularios.Frm_RegistroVentas;
 import java.util.Scanner;
-/**
- *
- * @author rzl10
- */
+
 public class Concesionario {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int opc;
-        
-        System.out.println("Digite por favor si desea   Registrar vehiculo o Registrar venta");
-        opc = entrada.nextInt();
-        
-        if (opc == 1) {
-            Frm_AgregarVehiculo AV = new Frm_AgregarVehiculo();
-            AV.setVisible(true);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Ingrese Opcion ");
+        int opc = in.nextInt();
+
+        switch (opc) {
+            case 1: {
+                Frm_AgregarVehiculo AV = new Frm_AgregarVehiculo();
+                AV.setVisible(true);
+                break;
+            }
+            case 2: {
+                Frm_RegistroVentas RV = new Frm_RegistroVentas();
+                RV.setVisible(true);
+                break;
+            }
+            default:
+                System.out.println("Default");
         }
-        else {
-            Frm_Venta AgV = new Frm_Venta();
-            AgV.setVisible(true);
-        }
-        
-        
     }
+
 }
