@@ -4,16 +4,24 @@
  */
 package Formularios;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
 /**
  *
  * @author rzl10
  */
 public class Menu extends javax.swing.JFrame {
 
+    
+    FondoPanel fondo = new FondoPanel();
     /**
      * Creates new form Menu
      */
     public Menu() {
+        this.setContentPane(fondo);
         initComponents();
     }
 
@@ -171,4 +179,27 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+
+ class FondoPanel extends JPanel
+    {
+        private Image imagen;
+        
+        @Override
+        public void paint(Graphics g)
+        {
+            imagen = new ImageIcon(getClass().getResource("/Imagenes/Presentación1.gif")).getImage();
+            
+            g.drawImage(imagen,0, 0, getWidth(), getHeight(),this);
+            
+            setOpaque(false);
+            
+            super.paint(g);
+      
+    }
+
+    private void setOpaque(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+ }
 }
