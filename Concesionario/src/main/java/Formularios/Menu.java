@@ -4,24 +4,16 @@
  */
 package Formularios;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-
 /**
  *
  * @author rzl10
  */
 public class Menu extends javax.swing.JFrame {
 
-    
-    FondoPanel fondo = new FondoPanel();
     /**
      * Creates new form Menu
      */
     public Menu() {
-        this.setContentPane(fondo);
         initComponents();
     }
 
@@ -38,13 +30,13 @@ public class Menu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        Jmen_Salir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        Jmen_AgregarVehiculo = new javax.swing.JMenuItem();
+        Jmen_ActualizaVehiculo = new javax.swing.JMenuItem();
+        Jmen_DelVehiculo = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        Jmen_RegVta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,39 +63,64 @@ public class Menu extends javax.swing.JFrame {
         );
 
         jMenu1.setText("File");
-
-        jMenuItem5.setText("Salir");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMenu1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+
+        Jmen_Salir.setText("Salir");
+        Jmen_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmen_SalirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Jmen_Salir);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("vehiculos");
-
-        jMenuItem1.setText("Agregar Vehiculo");
-        jMenu2.add(jMenuItem1);
-
-        jMenuItem3.setText("Actualizar Vehiculo");
-        jMenu2.add(jMenuItem3);
-
-        jMenuItem2.setText("Eliminar vehiculo");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenu2ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+
+        Jmen_AgregarVehiculo.setText("Agregar Vehiculo");
+        Jmen_AgregarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmen_AgregarVehiculoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Jmen_AgregarVehiculo);
+
+        Jmen_ActualizaVehiculo.setText("Actualizar Vehiculo");
+        jMenu2.add(Jmen_ActualizaVehiculo);
+
+        Jmen_DelVehiculo.setText("Eliminar vehiculo");
+        Jmen_DelVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmen_DelVehiculoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Jmen_DelVehiculo);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Ventas");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
 
-        jMenuItem4.setText("Registrar venta");
-        jMenu3.add(jMenuItem4);
+        Jmen_RegVta.setText("Registrar venta");
+        Jmen_RegVta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmen_RegVtaActionPerformed(evt);
+            }
+        });
+        jMenu3.add(Jmen_RegVta);
 
         jMenuBar1.add(jMenu3);
 
@@ -123,13 +140,35 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void Jmen_DelVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_DelVehiculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_Jmen_DelVehiculoActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void Jmen_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_SalirActionPerformed
+        System.exit(0);    }//GEN-LAST:event_Jmen_SalirActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void Jmen_AgregarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_AgregarVehiculoActionPerformed
+        Frm_AgregarVehiculo AV = new Frm_AgregarVehiculo();
+        AV.setVisible(true);
+
+    }//GEN-LAST:event_Jmen_AgregarVehiculoActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        Frm_RegistroVentas RV = new Frm_RegistroVentas();
+        RV.setVisible(true);
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void Jmen_RegVtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_RegVtaActionPerformed
+Frm_RegistroVentas RV = new Frm_RegistroVentas();
+        RV.setVisible(true);    }//GEN-LAST:event_Jmen_RegVtaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,39 +206,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Jmen_ActualizaVehiculo;
+    private javax.swing.JMenuItem Jmen_AgregarVehiculo;
+    private javax.swing.JMenuItem Jmen_DelVehiculo;
+    private javax.swing.JMenuItem Jmen_RegVta;
+    private javax.swing.JMenuItem Jmen_Salir;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-
- class FondoPanel extends JPanel
-    {
-        private Image imagen;
-        
-        @Override
-        public void paint(Graphics g)
-        {
-            imagen = new ImageIcon(getClass().getResource("/Imagenes/Presentación1.gif")).getImage();
-            
-            g.drawImage(imagen,0, 0, getWidth(), getHeight(),this);
-            
-            setOpaque(false);
-            
-            super.paint(g);
-      
-    }
-
-    private void setOpaque(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
- }
 }
