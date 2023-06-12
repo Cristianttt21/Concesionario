@@ -117,10 +117,10 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Jtf_Marca" min="-2" pref="239" max="-2" attributes="0"/>
                       <Component id="Jtf_Placa" min="-2" pref="88" max="-2" attributes="0"/>
+                      <Component id="Jcb_Marca" min="-2" pref="232" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -128,16 +128,16 @@
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="Jtf_Tipo" min="-2" pref="164" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
                           <Component id="Jtf_Modelo" min="-2" pref="95" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="Jtf_Kilometraje" min="-2" pref="135" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jcb_tipo" min="-2" pref="153" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -151,16 +151,16 @@
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Jtf_Placa" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Jtf_Tipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcb_tipo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Jtf_Marca" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Jtf_Modelo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Jtf_Kilometraje" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Jcb_Marca" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
@@ -194,17 +194,117 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Jtf_Placa">
-        </Component>
-        <Component class="javax.swing.JTextField" name="Jtf_Marca">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Jtf_MarcaActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="Jtf_Tipo">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Jtf_Modelo">
         </Component>
         <Component class="javax.swing.JTextField" name="Jtf_Kilometraje">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jcb_tipo">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="10">
+                <StringItem index="0" value="Automovil"/>
+                <StringItem index="1" value="Camioneta"/>
+                <StringItem index="2" value="Motocicleta "/>
+                <StringItem index="3" value="Motocarro"/>
+                <StringItem index="4" value="Cami&#xf3;n"/>
+                <StringItem index="5" value="Volqueta"/>
+                <StringItem index="6" value="Tractocami&#xf3;n"/>
+                <StringItem index="7" value="Bus"/>
+                <StringItem index="8" value="Microb&#xfa;s"/>
+                <StringItem index="9" value="Limusina"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcb_tipoActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Jcb_Marca">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="69">
+                <StringItem index="0" value="Acura"/>
+                <StringItem index="1" value="Alfa Romeo"/>
+                <StringItem index="2" value="Audi"/>
+                <StringItem index="3" value="Baic"/>
+                <StringItem index="4" value="BAW"/>
+                <StringItem index="5" value="BMW"/>
+                <StringItem index="6" value="Brilliance"/>
+                <StringItem index="7" value="BYD"/>
+                <StringItem index="8" value="Cadillac"/>
+                <StringItem index="9" value="Changan"/>
+                <StringItem index="10" value="Changhe"/>
+                <StringItem index="11" value="Chery"/>
+                <StringItem index="12" value="Chevrolet"/>
+                <StringItem index="13" value="Chrysler"/>
+                <StringItem index="14" value="Daihatsu"/>
+                <StringItem index="15" value="DFSK"/>
+                <StringItem index="16" value="Dodge"/>
+                <StringItem index="17" value="Dongfeng"/>
+                <StringItem index="18" value="DS"/>
+                <StringItem index="19" value="FAW"/>
+                <StringItem index="20" value="Ferrari"/>
+                <StringItem index="21" value="Fiat"/>
+                <StringItem index="22" value="Ford"/>
+                <StringItem index="23" value="Foton"/>
+                <StringItem index="24" value="Geely"/>
+                <StringItem index="25" value="GMC"/>
+                <StringItem index="26" value="Gonow"/>
+                <StringItem index="27" value="Great Wall"/>
+                <StringItem index="28" value="Haima"/>
+                <StringItem index="29" value="Haval"/>
+                <StringItem index="30" value="Honda"/>
+                <StringItem index="31" value="Hummer"/>
+                <StringItem index="32" value="Hyundai"/>
+                <StringItem index="33" value="Infiniti"/>
+                <StringItem index="34" value="JAC"/>
+                <StringItem index="35" value="Jaguar"/>
+                <StringItem index="36" value="Jeep"/>
+                <StringItem index="37" value="Kenbo"/>
+                <StringItem index="38" value="Kia"/>
+                <StringItem index="39" value="Land Rover"/>
+                <StringItem index="40" value="Lexus"/>
+                <StringItem index="41" value="Lifan"/>
+                <StringItem index="42" value="Mahindra"/>
+                <StringItem index="43" value="Maserati"/>
+                <StringItem index="44" value="Maxus"/>
+                <StringItem index="45" value="Mazda"/>
+                <StringItem index="46" value="Mercedes-Benz"/>
+                <StringItem index="47" value="MG"/>
+                <StringItem index="48" value="Mini"/>
+                <StringItem index="49" value="Mitsubishi"/>
+                <StringItem index="50" value="Nissan"/>
+                <StringItem index="51" value="Opel"/>
+                <StringItem index="52" value="Otros"/>
+                <StringItem index="53" value="Peugeot"/>
+                <StringItem index="54" value="Porsche"/>
+                <StringItem index="55" value="RAM"/>
+                <StringItem index="56" value="Renault"/>
+                <StringItem index="57" value="SEAT"/>
+                <StringItem index="58" value="Skoda"/>
+                <StringItem index="59" value="Ssangyong"/>
+                <StringItem index="60" value="Subaru"/>
+                <StringItem index="61" value="Suzuki"/>
+                <StringItem index="62" value="Toyota"/>
+                <StringItem index="63" value="UAZ"/>
+                <StringItem index="64" value="Volkswagen"/>
+                <StringItem index="65" value="Volvo"/>
+                <StringItem index="66" value="Wuling"/>
+                <StringItem index="67" value="Zhongxing"/>
+                <StringItem index="68" value="Zotye"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -215,17 +315,21 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="Jtb_datos">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="4">
-                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              <Table columnCount="5" rowCount="4">
+                <Column editable="true" title="Placa" type="java.lang.Object"/>
+                <Column editable="true" title="Marca" type="java.lang.Object"/>
+                <Column editable="true" title="Tipo" type="java.lang.Object"/>
+                <Column editable="true" title="Modelo" type="java.lang.Object"/>
+                <Column editable="true" title="Kilometraje" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jtb_datosMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -233,6 +337,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_ActualizarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
