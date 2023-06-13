@@ -93,6 +93,11 @@ public class Frm_AgregarVehiculo extends javax.swing.JFrame {
         });
 
         jcb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automovil", "Camioneta", "Motocicleta ", "Motocarro", "Camión", "Volqueta", "Tractocamión", "Bus", "Microbús", "Limusina", " ", " " }));
+        jcb_tipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb_tipoActionPerformed(evt);
+            }
+        });
 
         jcb_marca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acura", "Alfa Romeo", "Audi", "Baic", "BAW", "BMW", "Brilliance", "BYD", "Cadillac", "Changan", "Changhe", "Chery", "Chevrolet", "Chrysler", "Daihatsu", "DFSK", "Dodge", "Dongfeng", "DS", "FAW", "Ferrari", "Fiat", "Ford", "Foton", "Geely", "GMC", "Gonow", "Great Wall", "Haima", "Haval", "Honda", "Hummer", "Hyundai", "Infiniti", "JAC", "Jaguar", "Jeep", "Kenbo", "Kia", "Land Rover", "Lexus", "Lifan", "Mahindra", "Maserati", "Maxus", "Mazda", "Mercedes-Benz", "MG", "Mini", "Mitsubishi", "Nissan", "Opel", "Otros", "Peugeot", "Porsche", "RAM", "Renault", "SEAT", "Skoda", "Ssangyong", "Subaru", "Suzuki", "Toyota", "UAZ", "Volkswagen", "Volvo", "Wuling", "Zhongxing", "Zotye" }));
         jcb_marca.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +115,11 @@ public class Frm_AgregarVehiculo extends javax.swing.JFrame {
         });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -213,6 +223,14 @@ public class Frm_AgregarVehiculo extends javax.swing.JFrame {
     private void jtf_kilometrajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_kilometrajeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_kilometrajeActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jcb_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_tipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcb_tipoActionPerformed
 
     /**
      * @param args the command line arguments

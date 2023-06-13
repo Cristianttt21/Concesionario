@@ -95,6 +95,11 @@ public class Menu extends javax.swing.JFrame {
         jMenu2.add(Jmen_AgregarVehiculo);
 
         Jmen_ActualizaVehiculo.setText("Actualizar Vehiculo");
+        Jmen_ActualizaVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmen_ActualizaVehiculoActionPerformed(evt);
+            }
+        });
         jMenu2.add(Jmen_ActualizaVehiculo);
 
         Jmen_DelVehiculo.setText("Eliminar vehiculo");
@@ -169,6 +174,11 @@ public class Menu extends javax.swing.JFrame {
     private void Jmen_RegVtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_RegVtaActionPerformed
 Frm_RegistroVentas RV = new Frm_RegistroVentas();
         RV.setVisible(true);    }//GEN-LAST:event_Jmen_RegVtaActionPerformed
+
+    private void Jmen_ActualizaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmen_ActualizaVehiculoActionPerformed
+        Frm_ActualizarVehiculo RV = new Frm_ActualizarVehiculo();
+        RV.setVisible(true);
+    }//GEN-LAST:event_Jmen_ActualizaVehiculoActionPerformed
 
     /**
      * @param args the command line arguments

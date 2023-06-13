@@ -42,6 +42,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Actualizar Vehiculo"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Jmen_ActualizaVehiculoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="Jmen_DelVehiculo">
               <Properties>

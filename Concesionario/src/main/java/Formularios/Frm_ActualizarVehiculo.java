@@ -9,7 +9,6 @@ import Logica.Cls_ActualizarVehiculo;
  * @author Rodrigo Zuñiga
  */
 public class Frm_ActualizarVehiculo extends javax.swing.JFrame {
-    int num = 0;
     private final Cls_ActualizarVehiculo CP;
     /**
      * Creates new form Frm_ActualizarVehiculo
@@ -24,7 +23,13 @@ public class Frm_ActualizarVehiculo extends javax.swing.JFrame {
     private void listar (){
         Jtb_datos.setModel(CP.getDatos());
     }
-    
+        private void limpiar (){
+        
+        Jtf_Placa.setText("");
+        Jtf_Modelo.setText("");
+        Jtf_Kilometraje.setText("");
+                        
+    }
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -205,15 +210,7 @@ public class Frm_ActualizarVehiculo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Actualizar(){
-        if (num == 0){
-            
-        }else {
-            
-        }
-    }
-    
+   
     
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -235,6 +232,16 @@ public class Frm_ActualizarVehiculo extends javax.swing.JFrame {
 
     private void Btn_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ActualizarActionPerformed
         // TODO add your handling code here:
+        String placa = Jtf_Placa.getText();
+        String tipo = jcb_tipo.getSelectedItem().toString();
+        String marca = Jcb_Marca.getSelectedItem().toString();
+        int modelo = Integer.parseInt(Jtf_Modelo.getText());
+        int kilometraje = Integer.parseInt(Jtf_Kilometraje.getText());
+        int respuesta = CP.updateData(marca, tipo, modelo, kilometraje, placa);
+        if (respuesta>0){
+            listar();
+            limpiar();
+        }
     }//GEN-LAST:event_Btn_ActualizarActionPerformed
 
     /**
